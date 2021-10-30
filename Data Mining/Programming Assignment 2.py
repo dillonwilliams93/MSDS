@@ -35,7 +35,7 @@ def information_gain_target(dataset_file):
         count_no / count_total)
     return ig_loan
 
-ig_loan = information_gain_target('test_dataset.csv')
+ig_loan = information_gain_target('Classification_Test_Dataset.csv')
 print(f"ig_loan = {ig_loan}")
 
 def information_gain(p_count_yes, p_count_no):
@@ -105,7 +105,7 @@ attribute_values = {
 
 attributes = ["Age", "Income", "Student", "Credit Rating"]
 
-result = information_gain_attributes('test_dataset.csv', ig_loan, attributes, attribute_values)
+result = information_gain_attributes('Classification_Test_Dataset.csv', ig_loan, attributes, attribute_values)
 print(f"Result = {result}")
 
 # Part 2
@@ -154,4 +154,4 @@ def naive_bayes(dataset_file, attributes, attribute_values):
             probabilities[f"{attribute}"][f"{att_value}"]["no"] = ig_attribute_no / vcount_loan_no
     return probabilities
 
-print(f"Probabilities = {naive_bayes('test_dataset.csv',attributes,attribute_values)}")
+print(f"Probabilities = {naive_bayes('Classification_Test_Dataset.csv',attributes,attribute_values)}")
